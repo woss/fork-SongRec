@@ -588,7 +588,6 @@
                             <property name="action-name">win.no-dupes-setting</property>
                             <property name="subtitle" translatable="yes">Bump a song to the top of the history list and remove the former entry when the same song is detected multiple times</property>
                             <property name="title" translatable="yes">No duplicates in history</property>
-                            <property name="visible">False</property>
                           </object>
                         </child>
                       </object>

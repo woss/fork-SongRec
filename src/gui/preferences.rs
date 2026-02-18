@@ -13,6 +13,7 @@ use crate::utils::filesystem_operations::obtain_preferences_file_path;
 pub struct Preferences {
     pub enable_notifications: Option<bool>,
     pub enable_mpris: Option<bool>,
+    pub no_duplicates: Option<bool>,
     pub buffer_size_secs: Option<u64>,
     pub request_interval_secs: Option<u64>, // Legacy, before increasing default from 4 to 10
     pub request_interval_secs_v2: Option<u64>, // before decreasing from 10 to 8
@@ -25,6 +26,7 @@ impl Preferences {
         Preferences {
             enable_notifications: None,
             enable_mpris: None,
+            no_duplicates: None,
             buffer_size_secs: None,
             request_interval_secs: None,
             request_interval_secs_v2: None,
@@ -37,6 +39,7 @@ impl Preferences {
         Preferences {
             enable_notifications: Some(true),
             enable_mpris: Some(false),
+            no_duplicates: Some(true),
             buffer_size_secs: Some(12),
             request_interval_secs: None,
             request_interval_secs_v2: None,
@@ -51,6 +54,7 @@ impl Default for Preferences {
         Preferences {
             enable_notifications: Some(true),
             enable_mpris: Some(false),
+            no_duplicates: Some(true),
             buffer_size_secs: Some(12),
             request_interval_secs: None,
             request_interval_secs_v2: None,
@@ -109,6 +113,9 @@ impl PreferencesInterface {
             enable_mpris: update_preferences
                 .enable_mpris
                 .or(current_preferences.enable_mpris),
+            no_duplicates: update_preferences
+                .enable_mpris
+                .or(current_preferences.no_duplicates),
             buffer_size_secs: update_preferences
                 .buffer_size_secs
                 .or(current_preferences.buffer_size_secs),

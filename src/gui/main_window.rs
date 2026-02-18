@@ -1,11 +1,11 @@
 use adw::prelude::*;
 use chrono::Local;
 use gettextrs::gettext;
-use serde_json::json;
 use log::{debug, error, info, trace};
 #[cfg(feature = "mpris")]
 use mpris_player::PlaybackStatus;
 use percent_encoding::{utf8_percent_encode, NON_ALPHANUMERIC};
+use serde_json::json;
 use std::cell::RefCell;
 use std::error::Error;
 use std::rc::Rc;
@@ -560,8 +560,7 @@ impl App {
                 } else {
                     if let MicrophoneVolumePercent(_) = gui_message {
                         trace!("Received GUI message: {:?}", gui_message);
-                    }
-                    else if let SongRecognized(ref msg) = gui_message {
+                    } else if let SongRecognized(ref msg) = gui_message {
                         debug!("Received GUI message: SongRecognized({})", json!({
                             "artist_name": msg.artist_name.clone(),
                             "album_name": msg.album_name.clone(),
@@ -575,8 +574,7 @@ impl App {
                             "genre": msg.genre.clone(),
                             "shazam_json": msg.shazam_json.clone()
                         }).to_string());
-                    }
-                    else {
+                    } else {
                         debug!("Received GUI message: {:?}", gui_message);
                     }
 
@@ -718,34 +716,47 @@ impl App {
                                         .send_notification(Some("recognized-song"), &notification);
                                 }
 
-                                song_history_interface.borrow_mut().add_row_and_save(
-                                    SongHistoryRecord {
-                                        song_name: song_name,
-                                        album: Some(
-                                            message
-                                                .album_name
-                                                .as_ref()
-                                                .unwrap_or(&"".to_string())
-                                                .to_string(),
-                                        ),
-                                        track_key: Some(message.track_key),
-                                        release_year: Some(
-                                            message
-                                                .release_year
-                                                .as_ref()
-                                                .unwrap_or(&"".to_string())
-                                                .to_string(),
-                                        ),
-                                        genre: Some(
-                                            message
-                                                .genre
-                                                .as_ref()
-                                                .unwrap_or(&"".to_string())
-                                                .to_string(),
-                                        ),
-                                        recognition_date: Local::now().format("%c").to_string(),
-                                    },
-                                );
+                                let new_entry = SongHistoryRecord {
+                                    song_name: song_name,
+                                    album: Some(
+                                        message
+                                            .album_name
+                                            .as_ref()
+                                            .unwrap_or(&"".to_string())
+                                            .to_string(),
+                                    ),
+                                    track_key: Some(message.track_key),
+                                    release_year: Some(
+                                        message
+                                            .release_year
+                                            .as_ref()
+                                            .unwrap_or(&"".to_string())
+                                            .to_string(),
+                                    ),
+                                    genre: Some(
+                                        message
+                                            .genre
+                                            .as_ref()
+                                            .unwrap_or(&"".to_string())
+                                            .to_string(),
+                                    ),
+                                    recognition_date: Local::now().format("%c").to_string(),
+                                };
+
+                                if preferences_interface_ptr
+                                    .lock()
+                                    .unwrap()
+                                    .preferences
+                                    .no_duplicates
+                                    == Some(true)
+                                {
+                                    song_history_interface
+                                        .borrow_mut()
+                                        .remove(new_entry.clone());
+                                }
+                                song_history_interface
+                                    .borrow_mut()
+                                    .add_row_and_save(new_entry);
                             }
                         }
                         // This message is sent once in the program execution for
@@ -1065,6 +1076,24 @@ impl App {
             })
             .build();
 
+        let gui_tx = self.gui_tx.clone();
+
+        let action_no_dupes_setting = gio::ActionEntry::builder("no-dupes-setting")
+            .state(self.old_preferences.no_duplicates.unwrap().to_variant())
+            .activate(move |_, action, _| {
+                let state = action.state().unwrap();
+                let action_state: bool = state.get().unwrap();
+                let new_state = !action_state; // toggle
+                action.set_state(&new_state.to_variant());
+
+                let mut new_preference: Preferences = Preferences::new();
+                new_preference.no_duplicates = Some(new_state);
+                gui_tx
+                    .try_send(GUIMessage::UpdatePreference(new_preference))
+                    .unwrap();
+            })
+            .build();
+
         let action_close = gio::ActionEntry::builder("close")
             .activate(move |window: &adw::ApplicationWindow, _, _| {
                 window.close();
@@ -1099,6 +1128,7 @@ impl App {
             action_display_shortcuts,
             action_show_preferences,
             action_notification_setting,
+            action_no_dupes_setting,
             action_close,
             action_show_menu,
         ]);
@@ -1113,10 +1143,7 @@ impl App {
 
         application.set_accels_for_action("win.close", &["<Ctrl>Q", "<Primary>W"]);
         application.set_accels_for_action("win.recognize-file", &["<Ctrl>O"]);
-        application.set_accels_for_action(
-            "win.display-shortcuts",
-            &["<Primary>question"],
-        );
+        application.set_accels_for_action("win.display-shortcuts", &["<Primary>question"]);
         application
             .set_accels_for_action("win.show-preferences", &["<Primary>comma", "<Primary>P"]);
         application.set_accels_for_action("win.show-menu", &["F10"]);

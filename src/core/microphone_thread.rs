@@ -257,7 +257,7 @@ fn write_data<T, U>(
                 )))
                 .unwrap();
 
-                *processing_already_ongoing_borrow = true;
+            *processing_already_ongoing_borrow = true;
         }
 
         *number_unprocessed_samples = 0;

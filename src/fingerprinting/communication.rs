@@ -1,8 +1,8 @@
 use gettextrs::gettext;
-use rand::seq::SliceRandom;
-use soup::prelude::SessionExt;
 use glib::source::Priority;
+use rand::seq::SliceRandom;
 use serde_json::{json, Value};
+use soup::prelude::SessionExt;
 use std::error::Error;
 use std::time::SystemTime;
 use uuid::Uuid;
