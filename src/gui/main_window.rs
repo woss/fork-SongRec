@@ -1115,7 +1115,7 @@ impl App {
         application.set_accels_for_action("win.recognize-file", &["<Ctrl>O"]);
         application.set_accels_for_action(
             "win.display-shortcuts",
-            &["<Primary>question", "<Primary>P"],
+            &["<Primary>question"],
         );
         application
             .set_accels_for_action("win.show-preferences", &["<Primary>comma", "<Primary>P"]);
