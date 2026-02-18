@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-18 17:25+0100\n"
-"PO-Revision-Date: 2026-02-14 21:37+0000\n"
-"Last-Translator: \"Marin M.\" <nvram@users.noreply.weblate.fossplant.re>\n"
+"PO-Revision-Date: 2026-02-18 16:34+0000\n"
+"Last-Translator: Marin <25437947+marin-m@users.noreply.github.com>\n"
 "Language-Team: French <https://weblate.fossplant.re/projects/songrec/songrec/"
 "fr/>\n"
 "Language: fr_FR\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: src/cli_main.rs:118
 msgid "Available device:"
-msgstr ""
+msgstr "Périphérique disponible :"
 
 #: src/cli_main.rs:136
 msgid "Exiting: audio device not found"
@@ -69,6 +69,11 @@ msgid ""
 "library-related messages\n"
 "-vvv: Set the log level to TRACE"
 msgstr ""
+"-v : Définir le niveau de journalisation DEBUG au lieu d'INFO pour les "
+"messages en rapport avec SongRec\n"
+"-vv : Définir le niveau de journalisation DEBUG pour les messages en rapport "
+"avec SongRec, et INFO pour les messages en rapport avec les bibliothèques\n"
+"-vvv : Définir le niveau de journalisation TRACE"
 
 #: src/main.rs:97
 msgid ""
@@ -82,7 +87,7 @@ msgstr ""
 
 #: src/main.rs:103 src/main.rs:149 src/main.rs:204
 msgid "List available audio devices and quit"
-msgstr ""
+msgstr "Énumérer les périphériques audio disponibles et quitter"
 
 #: src/main.rs:109 src/main.rs:156 src/main.rs:210
 msgid "Specify the audio device to use"
@@ -93,6 +98,8 @@ msgid ""
 "Shazam interval between requests in seconds (increase if you are rate-"
 "limited)"
 msgstr ""
+"Intervalle entre les requêtes à Shazam exprimée en secondes (augmenter en "
+"cas de rate-limit)"
 
 #: src/main.rs:125 src/main.rs:172
 msgid "Enable printing full song info in JSON"
@@ -189,7 +196,7 @@ msgstr "Votre adresse IP fait l'objet d'une rate-limit"
 
 #: src/core/microphone_thread.rs:63
 msgid "Audio error:"
-msgstr ""
+msgstr "Erreur audio :"
 
 #: src/fingerprinting/signature_format.rs:97
 msgid "Invalid sample rate in decoded Shazam packet"
@@ -289,11 +296,11 @@ msgstr "Entrée sonore"
 
 #: translations/interface.ui.h:12
 msgid "Device"
-msgstr ""
+msgstr "Périphérique"
 
 #: translations/interface.ui.h:13
 msgid "Volume:"
-msgstr ""
+msgstr "Volume :"
 
 #: translations/interface.ui.h:14
 msgid "History options..."
@@ -338,6 +345,8 @@ msgstr "Préférences générales"
 #: translations/interface.ui.h:24
 msgid "Notify when a new song is recognized or network error is encountered"
 msgstr ""
+"Notifier lorsqu'une nouvelle chanson est reconnue ou une erreur réseau est "
+"rencontrée"
 
 #: translations/interface.ui.h:25
 msgid "Show notifications"
@@ -348,6 +357,8 @@ msgid ""
 "MPRIS will display information about recognized songs in places like the "
 "GNOME or KDE control panel"
 msgstr ""
+"MPRIS va afficher des informations à propos des chansons reconnues à des "
+"endroits comme le panneau de contrôle KDE ou GNOME"
 
 #: translations/interface.ui.h:27
 msgid "Enable MPRIS"
@@ -358,18 +369,21 @@ msgid ""
 "By default the last 12 seconds of music are fingerprinted and sent to "
 "Shazam. Editing may have an impact on reliability"
 msgstr ""
+"Par défaut, il est fait une empreinte des 12 dernières secondes d'audio qui "
+"sont envoyées à Shazam. Modifier ce paramètre peut avoir un impact sur la "
+"fiabilité du processus"
 
 #: translations/interface.ui.h:29
 msgid "Shazam buffer size in seconds"
-msgstr ""
+msgstr "Taille du tampon audio en secondes"
 
 #: translations/interface.ui.h:30
 msgid "By default 10, increase if you are rate-limited"
-msgstr ""
+msgstr "Par défaut 10, augmenter en cas de rate-limit"
 
 #: translations/interface.ui.h:31
 msgid "Shazam interval between requests in seconds"
-msgstr ""
+msgstr "Intervalle en secondes entre les requêtes vers Shazam"
 
 #: translations/interface.ui.h:32
 msgid ""
@@ -378,24 +392,31 @@ msgid ""
 "increate the \"request interval\" setting when leaving SongRec running in "
 "the background to reduce your changes of getting rate-limited."
 msgstr ""
+"Minimiser vers la zone de notifications en utilisant libayatana-appindicator "
+"au lieu de quitter l'application lorsque la fenêtre est fermée. Notez que "
+"vous devriez peut-être augmenter le paramètre « intervalle entre les "
+"requêtes » lorsque SongRec fonctionne en arrière-plain afin de réduire les "
+"risques de rate-limit."
 
 #: translations/interface.ui.h:33
 msgid "Minimize to system tray"
-msgstr ""
+msgstr "Minimiser dans la zone de notifications"
 
 #: translations/interface.ui.h:34
 msgid ""
 "Bump a song to the top of the history list and remove the former entry when "
 "the same song is detected multiple times"
 msgstr ""
+"Faire remonter une chanson en haut de l'historique et enlever les autres "
+"entrées quand une chanson est détectée plusieurs fois"
 
 #: translations/interface.ui.h:35
 msgid "No duplicates in history"
-msgstr ""
+msgstr "Empêcher les doublons dans l'historique"
 
 #: translations/interface.ui.h:36
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 #: translations/interface.ui.h:37
 msgid "About..."
@@ -427,7 +448,7 @@ msgstr "Copier l'album"
 
 #: translations/interface.ui.h:44
 msgid "Delete from History"
-msgstr ""
+msgstr "Supprimer de l'historique"
 
 #: translations/interface.ui.h:45
 msgid "Add to Favorites"
@@ -439,11 +460,11 @@ msgstr "Supprimer des favoris"
 
 #: translations/interface.ui.h:47
 msgid "Open SongRec"
-msgstr ""
+msgstr "Ouvrir SongRec"
 
 #: translations/interface.ui.h:48
 msgid "Quit..."
-msgstr ""
+msgstr "Quitter..."
 
 #~ msgid ""
 #~ "-v: Set the log level to DEBUG instead of WARN for SongRec-related "
