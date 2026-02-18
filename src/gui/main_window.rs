@@ -467,7 +467,7 @@ impl App {
         set_recording: bool,
         enable_mpris_cli: bool,
     ) {
-        // WIP: Setup threads + smol-rs/async-channel::unbounded listener
+        // Setup communication using threads + smol-rs/async-channel::unbounded listener
 
         // NOTE: Dropping the removed glib::MainContext from legacy code:
         // https://discourse.gnome.org/t/help-required-to-migrate-from-dropped-maincontext-channel-api/20922
@@ -821,7 +821,7 @@ impl App {
                         }
                     }
 
-                    // TODO handle missing messages here
+                    // Possibly handle missing messages here
                 }
             }
         });

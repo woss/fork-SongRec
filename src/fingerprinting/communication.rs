@@ -1,7 +1,6 @@
 use gettextrs::gettext;
 use rand::seq::SliceRandom;
 use soup::prelude::SessionExt;
-// use reqwest::header::HeaderMap;
 use glib::source::Priority;
 use serde_json::{json, Value};
 use std::error::Error;
@@ -51,8 +50,7 @@ pub async fn recognize_song_from_signature(
         uuid_1, uuid_2
     );
 
-    // WIP
-    let message = soup::Message::from_encoded_form("POST", &url, post_data.into())?; // glib::GString::from_string_unchecked(
+    let message = soup::Message::from_encoded_form("POST", &url, post_data.into())?;
 
     let headers = message.request_headers().unwrap();
     headers.append("Content-Language", "en_US");
