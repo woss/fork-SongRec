@@ -399,9 +399,6 @@
                           <object class="GtkSingleSelection" id="favorites_selection">
                             <property name="autoselect">False</property>
                             <property name="can-unselect">True</property>
-                            <property name="model">
-                              <object class="GListStore" id="favorites_list_store"/>
-                            </property>
                           </object>
                         </property>
                         <property name="show-column-separators">True</property>
@@ -816,4 +813,5 @@ Contributors https://github.com/marin-m/SongRec/graphs/contributors</property>
     <property name="transient-for">main_window</property>
   </object>
   <object class="GListStore" id="history_list_store"/>
+  <object class="GListStore" id="favorites_list_store"/>
 </interface>
