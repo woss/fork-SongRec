@@ -570,7 +570,7 @@
                             <property name="climb-rate">1.0</property>
                             <property name="numeric">True</property>
                             <property name="snap-to-ticks">True</property>
-                            <property name="subtitle" translatable="yes">By default 10, increase if you are rate-limited</property>
+                            <property name="subtitle" translatable="yes">By default 8, increase if you are rate-limited</property>
                             <property name="title" translatable="yes">Shazam interval between requests in seconds</property>
                             <property name="update-policy">if-valid</property>
                           </object>

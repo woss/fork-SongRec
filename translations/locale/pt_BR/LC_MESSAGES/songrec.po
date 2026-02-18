@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SongRec\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-18 17:37+0100\n"
+"POT-Creation-Date: 2026-02-18 21:26+0100\n"
 "PO-Revision-Date: 2026-02-13 16:58+0000\n"
 "Last-Translator: marcelo cripe <marcelocripe@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.fossplant.re/projects/"
@@ -50,7 +50,7 @@ msgstr "Atenção! Não há conexão com a internet"
 
 #: src/cli_main.rs:178 src/core/http_task.rs:54 src/core/http_task.rs:64
 #: src/core/http_task.rs:77 src/core/http_task.rs:120
-#: src/gui/main_window.rs:603
+#: src/gui/main_window.rs:618
 msgid "No match for this song"
 msgstr "A música não pôde ser identificada"
 
@@ -199,7 +199,7 @@ msgstr ""
 "detectado por meio do microfone, em vez de esperar que o usuário clique em "
 "um botão."
 
-#: src/core/http_task.rs:127 src/fingerprinting/communication.rs:68
+#: src/core/http_task.rs:127 src/fingerprinting/communication.rs:66
 msgid "Your IP has been rate-limited"
 msgstr ""
 
@@ -220,31 +220,31 @@ msgid "Invalid sample rate passed when encoding Shazam packet"
 msgstr ""
 "A taxa de amostragem passada ao codificar o pacote do ‘Shazam’ não é válida"
 
-#: src/gui/main_window.rs:537 src/gui/main_window.rs:596
+#: src/gui/main_window.rs:538 src/gui/main_window.rs:611
 msgid "Unable to enable MPRIS support"
 msgstr "A funcionalidade do ‘MPRIS’ não pôde ser ativada"
 
-#: src/gui/main_window.rs:656
+#: src/gui/main_window.rs:671
 msgid "Song recognized"
 msgstr "A música foi identificada"
 
-#: src/gui/main_window.rs:801
+#: src/gui/main_window.rs:829
 msgid "Are you sure you want to wipe history?"
 msgstr "Você tem certeza de que quer apagar a histórico?"
 
-#: src/gui/main_window.rs:802
+#: src/gui/main_window.rs:830
 msgid "_Yes"
 msgstr "_Sim"
 
-#: src/gui/main_window.rs:802
+#: src/gui/main_window.rs:830
 msgid "_No"
 msgstr "_Não"
 
-#: src/gui/preferences.rs:70
+#: src/gui/preferences.rs:78
 msgid "When parsing the preferences file:"
 msgstr "Ao analisar o arquivo das configurações:"
 
-#: src/gui/preferences.rs:127
+#: src/gui/preferences.rs:144
 msgid "When saving the preferences file:"
 msgstr "Ao salvar o arquivo das configurações:"
 
@@ -379,7 +379,7 @@ msgid "Shazam buffer size in seconds"
 msgstr ""
 
 #: translations/interface.ui.h:30
-msgid "By default 10, increase if you are rate-limited"
+msgid "By default 8, increase if you are rate-limited"
 msgstr ""
 
 #: translations/interface.ui.h:31
