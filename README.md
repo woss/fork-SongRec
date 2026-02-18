@@ -156,7 +156,7 @@ git clone https://github.com/marin-m/songrec
 cd songrec
 snapcraft pack
 sudo snap remove --purge songrec
-sudo snap install --dangerous songrec_0.6.2_amd64.snap
+sudo snap install --dangerous songrec_0.6.3_amd64.snap
 sudo snap connect songrec:audio-record :audio-record
 songrec
 ```
