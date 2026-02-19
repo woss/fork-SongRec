@@ -544,7 +544,7 @@
                         <child>
                           <object class="AdwSwitchRow" id="systray_setting">
                             <property name="action-name">win.systray-setting</property>
-                            <property name="subtitle" translatable="yes">When closing the window, minimize to system tray using libayatana-appindicator instead of closing the app. Please note that you may have to increase the "request interval" setting when leaving SongRec running in the background to reduce your changes of getting rate-limited.</property>
+                            <property name="subtitle" translatable="yes">When closing the window, minimize to system tray using KSNI instead of closing the app. Please note that you may have to increase the "request interval" setting when leaving SongRec running in the background to reduce your changes of getting rate-limited.</property>
                             <property name="title" translatable="yes">Minimize to system tray</property>
                             <property name="visible">False</property>
                           </object>
