@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-18 21:26+0100\n"
+"POT-Creation-Date: 2026-02-19 04:26+0100\n"
 "PO-Revision-Date: 2024-01-15 14:26+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -361,10 +361,10 @@ msgstr ""
 
 #: translations/interface.ui.h:32
 msgid ""
-"When closing the window, minimize to system tray using libayatana-"
-"appindicator instead of closing the app. Please note that you may have to "
-"increase the \"request interval\" setting when leaving SongRec running in "
-"the background to reduce your changes of getting rate-limited."
+"When closing the window, minimize to system tray using KSNI instead of "
+"closing the app. Please note that you may have to increase the \"request "
+"interval\" setting when leaving SongRec running in the background to reduce "
+"your changes of getting rate-limited."
 msgstr ""
 
 #: translations/interface.ui.h:33
