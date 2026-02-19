@@ -542,26 +542,24 @@
                           </object>
                         </child>
                         <child>
-                          <object class="AdwSpinRow" id="buffer_size_setting">
-                            <property name="adjustment">
-                              <object class="GtkAdjustment" id="buffer_size_value">
-                                <property name="lower">1.0</property>
-                                <property name="page-increment">1.0</property>
-                                <property name="page-size">1.0</property>
-                                <property name="step-increment">1.0</property>
-                                <property name="upper">513.0</property>
-                                <property name="value">12.0</property>
-                                <signal name="value-changed" handler="buffer_size_changed"/>
-                              </object>
-                            </property>
-                            <property name="climb-rate">1.0</property>
-                            <property name="numeric">True</property>
-                            <property name="snap-to-ticks">True</property>
-                            <property name="subtitle" translatable="yes">By default the last 12 seconds of music are fingerprinted and sent to Shazam. Editing may have an impact on reliability</property>
-                            <property name="title" translatable="yes">Shazam buffer size in seconds</property>
-                            <property name="update-policy">if-valid</property>
+                          <object class="AdwSwitchRow" id="systray_setting">
+                            <property name="action-name">win.systray-setting</property>
+                            <property name="subtitle" translatable="yes">When closing the window, minimize to system tray using libayatana-appindicator instead of closing the app. Please note that you may have to increase the "request interval" setting when leaving SongRec running in the background to reduce your changes of getting rate-limited.</property>
+                            <property name="title" translatable="yes">Minimize to system tray</property>
                           </object>
                         </child>
+                        <child>
+                          <object class="AdwSwitchRow" id="no_dupes_setting">
+                            <property name="action-name">win.no-dupes-setting</property>
+                            <property name="subtitle" translatable="yes">Bump a song to the top of the history list and remove the former entry when the same song is detected multiple times</property>
+                            <property name="title" translatable="yes">No duplicates in history</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup" id="network_preferences">
+                        <property name="title" translatable="yes">Network preferences</property>
                         <child>
                           <object class="AdwSpinRow" id="interval_setting">
                             <property name="adjustment">
@@ -584,17 +582,24 @@
                           </object>
                         </child>
                         <child>
-                          <object class="AdwSwitchRow" id="systray_setting">
-                            <property name="action-name">win.systray-setting</property>
-                            <property name="subtitle" translatable="yes">When closing the window, minimize to system tray using libayatana-appindicator instead of closing the app. Please note that you may have to increase the "request interval" setting when leaving SongRec running in the background to reduce your changes of getting rate-limited.</property>
-                            <property name="title" translatable="yes">Minimize to system tray</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwSwitchRow" id="no_dupes_setting">
-                            <property name="action-name">win.no-dupes-setting</property>
-                            <property name="subtitle" translatable="yes">Bump a song to the top of the history list and remove the former entry when the same song is detected multiple times</property>
-                            <property name="title" translatable="yes">No duplicates in history</property>
+                          <object class="AdwSpinRow" id="buffer_size_setting">
+                            <property name="adjustment">
+                              <object class="GtkAdjustment" id="buffer_size_value">
+                                <property name="lower">1.0</property>
+                                <property name="page-increment">1.0</property>
+                                <property name="page-size">1.0</property>
+                                <property name="step-increment">1.0</property>
+                                <property name="upper">513.0</property>
+                                <property name="value">12.0</property>
+                                <signal name="value-changed" handler="buffer_size_changed"/>
+                              </object>
+                            </property>
+                            <property name="climb-rate">1.0</property>
+                            <property name="numeric">True</property>
+                            <property name="snap-to-ticks">True</property>
+                            <property name="subtitle" translatable="yes">By default the last 12 seconds of music are fingerprinted and sent to Shazam. Editing may have an impact on reliability</property>
+                            <property name="title" translatable="yes">Shazam buffer size in seconds</property>
+                            <property name="update-policy">if-valid</property>
                           </object>
                         </child>
                       </object>
