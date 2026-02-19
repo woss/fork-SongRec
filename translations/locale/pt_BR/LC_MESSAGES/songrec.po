@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SongRec\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-19 07:53+0100\n"
+"POT-Creation-Date: 2026-02-19 08:16+0100\n"
 "PO-Revision-Date: 2026-02-13 16:58+0000\n"
 "Last-Translator: marcelo cripe <marcelocripe@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.fossplant.re/projects/"
@@ -394,10 +394,10 @@ msgstr "Ativar o ‘MPRIS’"
 
 #: translations/interface.ui.h:29
 msgid ""
-"When closing the window, minimize to system tray using libayatana-"
-"appindicator instead of closing the app. Please note that you may have to "
-"increase the \"request interval\" setting when leaving SongRec running in "
-"the background to reduce your changes of getting rate-limited."
+"When closing the window, minimize to system tray using KSNI instead of "
+"closing the app. Please note that you may have to increase the \"request "
+"interval\" setting when leaving SongRec running in the background to reduce "
+"your changes of getting rate-limited."
 msgstr ""
 
 #: translations/interface.ui.h:30
