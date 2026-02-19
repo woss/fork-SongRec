@@ -36,6 +36,7 @@ char *s = N_("Shazam interval between requests in seconds");
 char *s = N_("By default the last 12 seconds of music are fingerprinted and sent to Shazam. Editing may have an impact on reliability");
 char *s = N_("Shazam buffer size in seconds");
 char *s = N_("Settings");
+char *s = N_("_Preferences...");
 char *s = N_("About...");
 char *s = N_("Delete history");
 char *s = N_("Select a file to recognize");
