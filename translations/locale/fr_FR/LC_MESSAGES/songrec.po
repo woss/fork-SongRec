@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-19 09:24+0100\n"
-"PO-Revision-Date: 2026-02-19 06:58+0000\n"
+"PO-Revision-Date: 2026-02-19 11:38+0000\n"
 "Last-Translator: Marin <25437947+marin-m@users.noreply.github.com>\n"
 "Language-Team: French <https://weblate.fossplant.re/projects/songrec/songrec/"
 "fr/>\n"
@@ -448,7 +448,7 @@ msgstr "Paramètres"
 
 #: translations/interface.ui.h:39
 msgid "_Preferences..."
-msgstr ""
+msgstr "_Préférences..."
 
 #: translations/interface.ui.h:40
 msgid "About..."
