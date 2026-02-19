@@ -240,13 +240,15 @@ impl App {
         preferences_interface: Arc<Mutex<PreferencesInterface>>,
         label: &str,
         application: &adw::Application,
+        always: bool,
     ) {
-        if preferences_interface
-            .lock()
-            .unwrap()
-            .preferences
-            .enable_notifications
-            == Some(true)
+        if always
+            || preferences_interface
+                .lock()
+                .unwrap()
+                .preferences
+                .enable_notifications
+                == Some(true)
         {
             let notification = gio::Notification::new(&gettext("Network error"));
             notification.set_body(Some(&label));
@@ -675,6 +677,7 @@ impl App {
                                     preferences_interface_ptr.clone(),
                                     &rate_limited_message.label(),
                                     &application.clone(),
+                                    true,
                                 );
                             }
                             rate_limited_message.set_visible(is_rate_limited);
@@ -685,6 +688,7 @@ impl App {
                                     preferences_interface_ptr.clone(),
                                     &no_network_message.label(),
                                     &application.clone(),
+                                    false,
                                 );
                             }
                             no_network_message.set_visible(!network_is_reachable);
@@ -1138,6 +1142,24 @@ impl App {
 
         let gui_tx = self.gui_tx.clone();
 
+        let action_systray_setting = gio::ActionEntry::builder("systray-setting")
+            .state(self.old_preferences.enable_systray.unwrap().to_variant())
+            .activate(move |_, action, _| {
+                let state = action.state().unwrap();
+                let action_state: bool = state.get().unwrap();
+                let new_state = !action_state; // toggle
+                action.set_state(&new_state.to_variant());
+
+                let mut new_preference: Preferences = Preferences::new();
+                new_preference.enable_systray = Some(new_state);
+                gui_tx
+                    .try_send(GUIMessage::UpdatePreference(new_preference))
+                    .unwrap();
+            })
+            .build();
+
+        let gui_tx = self.gui_tx.clone();
+
         let action_no_dupes_setting = gio::ActionEntry::builder("no-dupes-setting")
             .state(self.old_preferences.no_duplicates.unwrap().to_variant())
             .activate(move |_, action, _| {
@@ -1198,6 +1220,7 @@ impl App {
             action_display_shortcuts,
             action_show_preferences,
             action_notification_setting,
+            action_systray_setting,
             action_no_dupes_setting,
             action_refresh_devices,
             action_close,

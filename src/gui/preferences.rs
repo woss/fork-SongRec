@@ -12,6 +12,7 @@ use crate::utils::filesystem_operations::obtain_preferences_file_path;
 #[serde(default)]
 pub struct Preferences {
     pub enable_notifications: Option<bool>,
+    pub enable_systray: Option<bool>,
     pub enable_mpris: Option<bool>,
     pub no_duplicates: Option<bool>,
     pub buffer_size_secs: Option<u64>,
@@ -25,6 +26,7 @@ impl Preferences {
     pub fn new() -> Self {
         Preferences {
             enable_notifications: None,
+            enable_systray: None,
             enable_mpris: None,
             no_duplicates: None,
             buffer_size_secs: None,
@@ -38,8 +40,9 @@ impl Preferences {
     pub fn with_interval(interval: u64) -> Self {
         Preferences {
             enable_notifications: Some(true),
+            enable_systray: Some(false),
             enable_mpris: Some(false),
-            no_duplicates: Some(true),
+            no_duplicates: Some(false),
             buffer_size_secs: Some(12),
             request_interval_secs: None,
             request_interval_secs_v2: None,
@@ -53,8 +56,9 @@ impl Default for Preferences {
     fn default() -> Self {
         Preferences {
             enable_notifications: Some(true),
+            enable_systray: Some(false),
             enable_mpris: Some(false),
-            no_duplicates: Some(true),
+            no_duplicates: Some(false),
             buffer_size_secs: Some(12),
             request_interval_secs: None,
             request_interval_secs_v2: None,
@@ -113,8 +117,11 @@ impl PreferencesInterface {
             enable_mpris: update_preferences
                 .enable_mpris
                 .or(current_preferences.enable_mpris),
+            enable_systray: update_preferences
+                .enable_systray
+                .or(current_preferences.enable_systray),
             no_duplicates: update_preferences
-                .enable_mpris
+                .no_duplicates
                 .or(current_preferences.no_duplicates),
             buffer_size_secs: update_preferences
                 .buffer_size_secs
