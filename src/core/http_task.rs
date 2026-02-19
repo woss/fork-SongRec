@@ -103,6 +103,7 @@ pub async fn http_task(
 ) {
     let session = soup::Session::new();
     session.set_timeout(20);
+    session.set_idle_timeout(2);
 
     while let Ok(message) = http_rx.recv().await {
         // XX USE SOUP3 CF. https://github.com/marin-m/SongRec/issues/223

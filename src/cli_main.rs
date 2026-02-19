@@ -21,7 +21,7 @@ use crate::gui::preferences::{Preferences, PreferencesInterface};
 use crate::utils::csv_song_history::SongHistoryRecord;
 // TODO re-implement this
 #[cfg(feature = "mpris")]
-use crate::utils::mpris_player::{get_player, update_song};
+use crate::plugins::mpris_player::{get_player, update_song};
 
 pub enum CLIOutputType {
     SongName,

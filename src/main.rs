@@ -45,7 +45,12 @@ mod utils {
 
     #[cfg(feature = "ffmpeg")]
     pub mod ffmpeg_wrapper;
+}
 
+mod plugins {
+    #[cfg(feature = "gui")]
+    #[cfg(target_os = "linux")]
+    pub mod ksni;
     #[cfg(feature = "mpris")]
     pub mod mpris_player;
 }

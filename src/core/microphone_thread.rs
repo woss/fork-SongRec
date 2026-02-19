@@ -180,6 +180,14 @@ pub fn microphone_thread(
                 gui_tx_4.try_send(GUIMessage::MicrophoneRecording).unwrap();
             }
 
+            RefreshDevices => {
+                let device_names: Vec<DeviceListItem> = backend.list_devices(&host);
+
+                gui_tx
+                    .try_send(GUIMessage::DevicesList(Box::new(device_names)))
+                    .unwrap();
+            }
+
             MicrophoneRecordStop => {
                 if let Some(some_stream) = stream {
                     drop(some_stream);
