@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-19 09:24+0100\n"
-"PO-Revision-Date: 2024-01-15 14:26+0100\n"
+"POT-Creation-Date: 2026-02-19 12:42+0100\n"
+"PO-Revision-Date: 2026-02-20 11:16+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/cli_main.rs:118
 msgid "Available device:"
-msgstr ""
+msgstr "Beschikbaar apparaat:"
 
 #: src/cli_main.rs:136
 msgid "Exiting: audio device not found"
-msgstr "Geen audio-apparaat aangetroffen"
+msgstr "Geen audioapparaat aangetroffen"
 
 #: src/cli_main.rs:142
 msgid "Exiting: no audio devices found!"
-msgstr "Geen audio-apparaten aangetroffen"
+msgstr "Geen audioapparaten aangetroffen!"
 
 #: src/cli_main.rs:147
 msgid "Using device"
@@ -67,6 +67,11 @@ msgid ""
 "library-related messages\n"
 "-vvv: Set the log level to TRACE"
 msgstr ""
+"-v: Stel het logniveau in op DEBUG in plaats van INFO, voor berichten "
+"omtrent SongRec\n"
+"-vv: Stel het logniveau in op DEBUG voor berichten omtrent SongRec, en op "
+"INFO voor berichten omtrent de bibliotheek\n"
+"-vvv: Stel het logniveau in op TRACE"
 
 #: src/main.rs:102
 msgid ""
@@ -78,17 +83,18 @@ msgstr ""
 
 #: src/main.rs:108 src/main.rs:154 src/main.rs:209
 msgid "List available audio devices and quit"
-msgstr ""
+msgstr "Toon alle audioapparaten en sluit af"
 
 #: src/main.rs:114 src/main.rs:161 src/main.rs:215
 msgid "Specify the audio device to use"
-msgstr "Kies het te gebruiken audio-apparaat"
+msgstr "Kies het te gebruiken audioapparaat"
 
 #: src/main.rs:122 src/main.rs:169 src/main.rs:223
 msgid ""
 "Shazam interval between requests in seconds (increase if you are rate-"
 "limited)"
 msgstr ""
+"De Shazam-tijd tussen verzoeken (in seconden — verhoog indien afgekapt)"
 
 #: src/main.rs:130 src/main.rs:177
 msgid "Enable printing full song info in JSON"
@@ -175,11 +181,11 @@ msgstr "Toon het venster, maar wacht met het starten van de muziekherkenning."
 
 #: src/core/http_task.rs:128 src/fingerprinting/communication.rs:66
 msgid "Your IP has been rate-limited"
-msgstr ""
+msgstr "Je ip-verzoeken zijn afgekapt"
 
 #: src/core/microphone_thread.rs:63
 msgid "Audio error:"
-msgstr ""
+msgstr "Audiofout:"
 
 #: src/fingerprinting/signature_format.rs:97
 msgid "Invalid sample rate in decoded Shazam packet"
@@ -196,15 +202,15 @@ msgstr ""
 
 #: src/gui/main_window.rs:239
 msgid "Application error"
-msgstr ""
+msgstr "Programmafout"
 
 #: src/gui/main_window.rs:260
 msgid "Network error"
-msgstr ""
+msgstr "Netwerkfout"
 
 #: src/gui/main_window.rs:300
 msgid "Unable to enable notification icon"
-msgstr ""
+msgstr "Het systeemvakpictogram kan niet worden ingeschakeld"
 
 #: src/gui/main_window.rs:635 src/gui/main_window.rs:708
 msgid "Unable to enable MPRIS support"
@@ -216,15 +222,15 @@ msgstr "Het nummer is herkend"
 
 #: src/gui/main_window.rs:950
 msgid "Are you sure you want to wipe history?"
-msgstr ""
+msgstr "Weet je zeker dat je de geschiedenis wilt wissen?"
 
 #: src/gui/main_window.rs:951
 msgid "_Yes"
-msgstr ""
+msgstr "_Ja"
 
 #: src/gui/main_window.rs:951
 msgid "_No"
-msgstr ""
+msgstr "_Nee"
 
 #: src/gui/preferences.rs:82
 msgid "When parsing the preferences file:"
@@ -244,11 +250,11 @@ msgstr "De favorieten op de schijf kunnen niet worden uitgelezen:"
 
 #: src/plugins/ksni.rs:23
 msgid "Open SongRec"
-msgstr ""
+msgstr "SongRec openen"
 
 #: src/plugins/ksni.rs:31
 msgid "Quit..."
-msgstr ""
+msgstr "Afsluiten…"
 
 #: translations/interface.ui.h:1
 msgid "Recognize songs"
@@ -260,15 +266,15 @@ msgstr "Herkennen uit bestand"
 
 #: translations/interface.ui.h:3
 msgid "Pick a file..."
-msgstr ""
+msgstr "Kies een bestand…"
 
 #: translations/interface.ui.h:4
 msgid "Recognize from microphone"
-msgstr ""
+msgstr "Herkennen via microfoon"
 
 #: translations/interface.ui.h:5
 msgid "Recognize from my speakers"
-msgstr ""
+msgstr "Herkennen via luidsprekers"
 
 #: translations/interface.ui.h:6
 msgid "Shazam servers are not reachable, are you connected?"
@@ -277,7 +283,7 @@ msgstr ""
 
 #: translations/interface.ui.h:7
 msgid "ERROR: Your IP has been rate-limited"
-msgstr ""
+msgstr "FOUTMELDING: je ip-verzoeken zijn afgekapt"
 
 #: translations/interface.ui.h:8
 msgid "Recognition results"
@@ -289,11 +295,11 @@ msgstr "Opzoeken op YouTube"
 
 #: translations/interface.ui.h:10
 msgid "Search..."
-msgstr ""
+msgstr "Zoeken…"
 
 #: translations/interface.ui.h:11
 msgid "Refresh available devices"
-msgstr ""
+msgstr "Lijst met beschikbare apparaten herladen"
 
 #: translations/interface.ui.h:12
 msgid "Audio input"
@@ -301,15 +307,15 @@ msgstr "Audio-invoer"
 
 #: translations/interface.ui.h:13
 msgid "Device"
-msgstr ""
+msgstr "Apparaat"
 
 #: translations/interface.ui.h:14
 msgid "Volume:"
-msgstr ""
+msgstr "Volumeniveau:"
 
 #: translations/interface.ui.h:15
 msgid "History options..."
-msgstr ""
+msgstr "Geschiedenisopties…"
 
 #: translations/interface.ui.h:16
 msgid "Recognition history"
@@ -329,11 +335,11 @@ msgstr "Herkend op"
 
 #: translations/interface.ui.h:20
 msgid "View favorites"
-msgstr ""
+msgstr "Favorieten bekijken"
 
 #: translations/interface.ui.h:21
 msgid "Application menu"
-msgstr ""
+msgstr "Programmamenu"
 
 #: translations/interface.ui.h:22
 msgid "Export to CSV"
@@ -345,25 +351,29 @@ msgstr "Favorieten"
 
 #: translations/interface.ui.h:24
 msgid "General preferences"
-msgstr ""
+msgstr "Algemene instellingen"
 
 #: translations/interface.ui.h:25
 msgid "Notify when a new song is recognized or network error is encountered"
 msgstr ""
+"Toon een melding na het herkennen van een nummer of als er een netwerfout "
+"optreedt"
 
 #: translations/interface.ui.h:26
 msgid "Show notifications"
-msgstr ""
+msgstr "Meldingen tonen"
 
 #: translations/interface.ui.h:27
 msgid ""
 "MPRIS will display information about recognized songs in places like the "
 "GNOME or KDE control panel"
 msgstr ""
+"MPRIS toont informatie omtrent herkende nummers op onder andere de panelen/"
+"bovenbalk van GNOME en KDE"
 
 #: translations/interface.ui.h:28
 msgid "Enable MPRIS"
-msgstr ""
+msgstr "MPRIS inschakelen"
 
 #: translations/interface.ui.h:29
 msgid ""
@@ -372,50 +382,57 @@ msgid ""
 "interval\" setting when leaving SongRec running in the background to reduce "
 "your changes of getting rate-limited."
 msgstr ""
+"Minimaliseer het venster naar het systeemvak in plaats van het af te "
+"sluiten. Let op: hiervoor dient de verzoektijd te worden verhoogd, omdat er "
+"anders kans is dat verzoeken worden afgekapt."
 
 #: translations/interface.ui.h:30
 msgid "Minimize to system tray"
-msgstr ""
+msgstr "Minimaliseren naar systeemvak"
 
 #: translations/interface.ui.h:31
 msgid ""
 "Bump a song to the top of the history list and remove the former entry when "
 "the same song is detected multiple times"
 msgstr ""
+"Zet een nummer bovenaan de lijst en wis de vorige vermelding, indien het "
+"nummer meermaals herkend is"
 
 #: translations/interface.ui.h:32
 msgid "No duplicates in history"
-msgstr ""
+msgstr "Doublures in geschiedenis voorkomen"
 
 #: translations/interface.ui.h:33
 msgid "Network preferences"
-msgstr ""
+msgstr "Netwerkinstellingen"
 
 #: translations/interface.ui.h:34
 msgid "By default 8, increase if you are rate-limited"
-msgstr ""
+msgstr "Standaard: 8 — verhoog indien je verzoeken worden afgekapt"
 
 #: translations/interface.ui.h:35
 msgid "Shazam interval between requests in seconds"
-msgstr ""
+msgstr "De Shazam-tijd tussen verzoeken (in seconden)"
 
 #: translations/interface.ui.h:36
 msgid ""
 "By default the last 12 seconds of music are fingerprinted and sent to "
 "Shazam. Editing may have an impact on reliability"
 msgstr ""
+"Standaard worden de laatste 12 seconden vastgelegd en doorgestuurd naar "
+"Shazam — het bewerken hiervan kan de betrouwbaarheid verlagen"
 
 #: translations/interface.ui.h:37
 msgid "Shazam buffer size in seconds"
-msgstr ""
+msgstr "De Shazam-buffertijd (in seconden)"
 
 #: translations/interface.ui.h:38
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 #: translations/interface.ui.h:39
 msgid "_Preferences..."
-msgstr ""
+msgstr "_Instellingen…"
 
 #: translations/interface.ui.h:40
 msgid "About..."
@@ -423,7 +440,7 @@ msgstr "Over…"
 
 #: translations/interface.ui.h:41
 msgid "Delete history"
-msgstr ""
+msgstr "Geschiedenis wissen"
 
 #: translations/interface.ui.h:42
 msgid "Select a file to recognize"
@@ -447,7 +464,7 @@ msgstr "Albumnaam kopiëren"
 
 #: translations/interface.ui.h:47
 msgid "Delete from History"
-msgstr ""
+msgstr "Wissen uit geschiedenis"
 
 #: translations/interface.ui.h:48
 msgid "Add to Favorites"
