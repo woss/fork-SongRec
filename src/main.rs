@@ -332,9 +332,9 @@ fn main() -> Result<(), Box<dyn Error>> {
                 .unwrap()
                 .clone();
 
-            let main_context = glib::MainContext::new();
-            let main_loop = glib::MainLoop::new(Some(&main_context), false);
-            main_context.spawn_local(async move {
+            let main_loop = glib::MainLoop::new(None, false);
+            let main_loop_inner = main_loop.clone();
+            glib::spawn_future_local(async move {
                 println!(
                     "{}",
                     serde_json::to_string_pretty(
@@ -348,6 +348,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     )
                     .unwrap()
                 );
+                main_loop_inner.quit();
             });
             main_loop.run();
         }
@@ -376,9 +377,9 @@ fn main() -> Result<(), Box<dyn Error>> {
             let session = soup::Session::new();
             session.set_timeout(20);
 
-            let main_context = glib::MainContext::new();
-            let main_loop = glib::MainLoop::new(Some(&main_context), false);
-            main_context.spawn_local(async move {
+            let main_loop = glib::MainLoop::new(None, false);
+            let main_loop_inner = main_loop.clone();
+            glib::spawn_future_local(async move {
                 println!(
                     "{}",
                     serde_json::to_string_pretty(
@@ -391,6 +392,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     )
                     .unwrap()
                 );
+                main_loop_inner.quit();
             });
             main_loop.run();
         }
