@@ -153,7 +153,7 @@ For the latter, you will then find the project's binary (that you will be able t
 
 Note: You may remove dependencies over GTK+, Pulseaudio/PipeWire's libpulse or DBus MPRIS through editing the `-F` flag passed to `cargo`.
 
-### Building the Snap package
+### Building the Snap package
 
 When building the Snap package locally, be sure to connect the `:audio-record` interface manually so that the application works:
 
