@@ -36,13 +36,19 @@ sudo pacman -S songrec
 songrec
 ```
 
-Using apt with PPA (Ubuntu, supported up to the current 25.10):
+Using apt with PPA (Ubuntu, supported from 24.04 LTS up to the current 25.10):
 
 ```bash
 wget -qO- 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x6888550b2fc77d09' | sudo tee /etc/apt/trusted.gpg.d/songrec.asc
 sudo apt-add-repository ppa:marin-m/songrec -y -u
 sudo apt install songrec -y
 songrec
+```
+
+Using app with Snapcraft (all Ubuntu versions):
+
+```bash
+sudo snap install songrec
 ```
 
 Using Flatpak (all distributions) (NOTE: with Flatpak, the GUI should work fine but some of the CLI features may not be usable due to filesystem sandboxing restrictions):
