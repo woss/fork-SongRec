@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-19 09:24+0100\n"
-"PO-Revision-Date: 2025-04-10 11:41+1100\n"
+"PO-Revision-Date: 2026-02-25 15:34+1100\n"
 "Last-Translator: Aleksandr Shamaraev <shad@altlinux.org>\n"
 "Language-Team: shad@altlinux.org\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/cli_main.rs:118
 msgid "Available device:"
-msgstr ""
+msgstr "Доступное устройство:"
 
 #: src/cli_main.rs:136
 msgid "Exiting: audio device not found"
@@ -67,6 +67,11 @@ msgid ""
 "library-related messages\n"
 "-vvv: Set the log level to TRACE"
 msgstr ""
+"-v: Установить уровень логирования DEBUG вместо INFO для сообщений, "
+"связанных с SongRec\n"
+"-vv: Установить уровень логирования DEBUG для сообщений, связанных с "
+"SongRec, и INFO для сообщений, связанных с библиотекой\n"
+"-vvv: Установить уровень логирования TRACE"
 
 #: src/main.rs:102
 msgid ""
@@ -79,7 +84,7 @@ msgstr ""
 
 #: src/main.rs:108 src/main.rs:154 src/main.rs:209
 msgid "List available audio devices and quit"
-msgstr ""
+msgstr "Отобразить список доступных аудиоустройств и выйти"
 
 #: src/main.rs:114 src/main.rs:161 src/main.rs:215
 msgid "Specify the audio device to use"
@@ -90,6 +95,8 @@ msgid ""
 "Shazam interval between requests in seconds (increase if you are rate-"
 "limited)"
 msgstr ""
+"Интервал между запросами Shazam в секундах (увеличьте, если у вас "
+"установлено ограничение на количество запросов)"
 
 #: src/main.rs:130 src/main.rs:177
 msgid "Enable printing full song info in JSON"
@@ -177,11 +184,11 @@ msgstr ""
 
 #: src/core/http_task.rs:128 src/fingerprinting/communication.rs:66
 msgid "Your IP has been rate-limited"
-msgstr ""
+msgstr "Для вашего IP-адреса установлено ограничение скорости запросов"
 
 #: src/core/microphone_thread.rs:63
 msgid "Audio error:"
-msgstr ""
+msgstr "Аудиоошибка:"
 
 #: src/fingerprinting/signature_format.rs:97
 msgid "Invalid sample rate in decoded Shazam packet"
@@ -197,15 +204,15 @@ msgstr "При кодировании пакета Shazam передана не�
 
 #: src/gui/main_window.rs:239
 msgid "Application error"
-msgstr ""
+msgstr "Ошибка приложения"
 
 #: src/gui/main_window.rs:260
 msgid "Network error"
-msgstr ""
+msgstr "Сетевая ошибка"
 
 #: src/gui/main_window.rs:300
 msgid "Unable to enable notification icon"
-msgstr ""
+msgstr "Не удаётся включить значок уведомления"
 
 #: src/gui/main_window.rs:635 src/gui/main_window.rs:708
 msgid "Unable to enable MPRIS support"
@@ -217,15 +224,15 @@ msgstr "Песня распознана"
 
 #: src/gui/main_window.rs:950
 msgid "Are you sure you want to wipe history?"
-msgstr ""
+msgstr "Вы уверены, что хотите стереть историю?"
 
 #: src/gui/main_window.rs:951
 msgid "_Yes"
-msgstr ""
+msgstr "_Да"
 
 #: src/gui/main_window.rs:951
 msgid "_No"
-msgstr ""
+msgstr "_Нет"
 
 #: src/gui/preferences.rs:82
 msgid "When parsing the preferences file:"
@@ -245,15 +252,15 @@ msgstr "Ошибка при чтении избранного на диске:"
 
 #: src/plugins/ksni.rs:23
 msgid "Open SongRec"
-msgstr ""
+msgstr "Открыть SongRec"
 
 #: src/plugins/ksni.rs:31
 msgid "Quit..."
-msgstr ""
+msgstr "Выход..."
 
 #: translations/interface.ui.h:1
 msgid "Recognize songs"
-msgstr "Распознавать песни"
+msgstr "Распознавание песен"
 
 #: translations/interface.ui.h:2
 msgid "Recognize from file"
@@ -261,15 +268,15 @@ msgstr "Распознать из файла"
 
 #: translations/interface.ui.h:3
 msgid "Pick a file..."
-msgstr ""
+msgstr "Выберите файл..."
 
 #: translations/interface.ui.h:4
 msgid "Recognize from microphone"
-msgstr ""
+msgstr "Распознать с микрофона"
 
 #: translations/interface.ui.h:5
 msgid "Recognize from my speakers"
-msgstr ""
+msgstr "Распознать с колонок"
 
 #: translations/interface.ui.h:6
 msgid "Shazam servers are not reachable, are you connected?"
@@ -277,7 +284,7 @@ msgstr "Серверы Shazam недоступны, Вы подключены к
 
 #: translations/interface.ui.h:7
 msgid "ERROR: Your IP has been rate-limited"
-msgstr ""
+msgstr "ОШИБКА: Ваш IP-адрес ограничен по количеству запросов"
 
 #: translations/interface.ui.h:8
 msgid "Recognition results"
@@ -289,11 +296,11 @@ msgstr "Поиск на YouTube"
 
 #: translations/interface.ui.h:10
 msgid "Search..."
-msgstr ""
+msgstr "Поиск..."
 
 #: translations/interface.ui.h:11
 msgid "Refresh available devices"
-msgstr ""
+msgstr "Обновить список доступных устройств"
 
 #: translations/interface.ui.h:12
 msgid "Audio input"
@@ -301,15 +308,15 @@ msgstr "Аудиовход"
 
 #: translations/interface.ui.h:13
 msgid "Device"
-msgstr ""
+msgstr "Устройство"
 
 #: translations/interface.ui.h:14
 msgid "Volume:"
-msgstr ""
+msgstr "Громкость:"
 
 #: translations/interface.ui.h:15
 msgid "History options..."
-msgstr ""
+msgstr "Опции истории..."
 
 #: translations/interface.ui.h:16
 msgid "Recognition history"
@@ -329,11 +336,11 @@ msgstr "Дата распознавания"
 
 #: translations/interface.ui.h:20
 msgid "View favorites"
-msgstr ""
+msgstr "Посмотреть избранное"
 
 #: translations/interface.ui.h:21
 msgid "Application menu"
-msgstr ""
+msgstr "Меню приложения"
 
 #: translations/interface.ui.h:22
 msgid "Export to CSV"
@@ -345,25 +352,27 @@ msgstr "Избранное"
 
 #: translations/interface.ui.h:24
 msgid "General preferences"
-msgstr ""
+msgstr "Общие предпочтения"
 
 #: translations/interface.ui.h:25
 msgid "Notify when a new song is recognized or network error is encountered"
-msgstr ""
+msgstr "Уведомлять о появлении новой песни или возникновении сетевой ошибки"
 
 #: translations/interface.ui.h:26
 msgid "Show notifications"
-msgstr ""
+msgstr "Показывать уведомления"
 
 #: translations/interface.ui.h:27
 msgid ""
 "MPRIS will display information about recognized songs in places like the "
 "GNOME or KDE control panel"
 msgstr ""
+"MPRIS будет отображать информацию об распознанных песнях в таких местах, как "
+"панель управления GNOME или KDE"
 
 #: translations/interface.ui.h:28
 msgid "Enable MPRIS"
-msgstr ""
+msgstr "Включить MPRIS"
 
 #: translations/interface.ui.h:29
 msgid ""
@@ -372,58 +381,68 @@ msgid ""
 "interval\" setting when leaving SongRec running in the background to reduce "
 "your changes of getting rate-limited."
 msgstr ""
+"При закрытии окна сворачивайте его в системный трей с помощью KSNI вместо "
+"закрытия приложения. Обратите внимание, что при работе SongRec в фоновом "
+"режиме может потребоваться увеличить параметр «интервал запросов», чтобы "
+"снизить вероятность ограничения скорости запросов."
 
 #: translations/interface.ui.h:30
 msgid "Minimize to system tray"
-msgstr ""
+msgstr "Свернуть в системный трей"
 
 #: translations/interface.ui.h:31
 msgid ""
 "Bump a song to the top of the history list and remove the former entry when "
 "the same song is detected multiple times"
 msgstr ""
+"Переместить песню в начало списка истории и удалить предыдущую запись, если "
+"одна и та же песня обнаружена несколько раз."
 
 #: translations/interface.ui.h:32
 msgid "No duplicates in history"
-msgstr ""
+msgstr "Без дубликатов в истории"
 
 #: translations/interface.ui.h:33
 msgid "Network preferences"
-msgstr ""
+msgstr "Сетевые настройки"
 
 #: translations/interface.ui.h:34
 msgid "By default 8, increase if you are rate-limited"
 msgstr ""
+"По умолчанию установлено значение 8; увеличьте его, если у вас установлено "
+"ограничение на количество запросов"
 
 #: translations/interface.ui.h:35
 msgid "Shazam interval between requests in seconds"
-msgstr ""
+msgstr "Интервал между запросами Shazam в секундах"
 
 #: translations/interface.ui.h:36
 msgid ""
 "By default the last 12 seconds of music are fingerprinted and sent to "
 "Shazam. Editing may have an impact on reliability"
 msgstr ""
+"По умолчанию последние 12 секунд музыки маркируются и отправляются в Shazam. "
+"Редактирование может повлиять на надежность распознавания."
 
 #: translations/interface.ui.h:37
 msgid "Shazam buffer size in seconds"
-msgstr ""
+msgstr "Размер буфера Shazam в секундах"
 
 #: translations/interface.ui.h:38
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: translations/interface.ui.h:39
 msgid "_Preferences..."
-msgstr ""
+msgstr "_Настройки..."
 
 #: translations/interface.ui.h:40
 msgid "About..."
-msgstr "О..."
+msgstr "О SongRec..."
 
 #: translations/interface.ui.h:41
 msgid "Delete history"
-msgstr ""
+msgstr "Удалить историю"
 
 #: translations/interface.ui.h:42
 msgid "Select a file to recognize"
@@ -447,7 +466,7 @@ msgstr "Копировать альбом"
 
 #: translations/interface.ui.h:47
 msgid "Delete from History"
-msgstr ""
+msgstr "Удалить из истории"
 
 #: translations/interface.ui.h:48
 msgid "Add to Favorites"
