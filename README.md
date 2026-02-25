@@ -80,6 +80,16 @@ Note: You may remove dependencies over GTK+, Pulseaudio/PipeWire's libpulse or D
 
 (**WARNING**: Remind to compile the code in "--release" mode for correct performance.)
 
+<a href="https://weblate.fossplant.re/engage/songrec/">
+<img src="https://weblate.fossplant.re/widget/songrec/songrec/svg-badge.svg" alt="État de la traduction" />
+</a>
+<a href="https://crates.io/crates/songrec">
+<img alt="Crates.io Version" src="https://img.shields.io/crates/v/songrec">
+</a>
+<a href="https://snapcraft.io/songrec">
+<img alt="Snapcraft Version" src="https://img.shields.io/snapcraft/v/songrec/latest/stable">
+</a>
+
 ### Installing Rust
 
 First, you need to [install the Rust compiler and package manager](https://www.rust-lang.org/tools/install). The current minimal `rustc` required version should be at least version 1.84.
