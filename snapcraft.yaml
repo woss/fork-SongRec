@@ -59,7 +59,7 @@ plugs:
     interface: content
     target: $SNAP/gnome-platform
     default-provider: gnome-46-2404
-  gtk-4-themes:
+  gtk-3-themes:
     interface: content
     target: $SNAP/data-dir/themes
     default-provider: gtk-common-themes
@@ -106,6 +106,7 @@ parts:
       - libffi8
 
     plugin: rust
+    rust-use-global-lto: true
     source: .
 
     after: [alsa-mixin]
@@ -123,6 +124,22 @@ parts:
       - libasound2
       - libasound2-plugins
       - yad
+  
+  translations:
+    plugin: dump
+    source: translations/
+    source-type: local
+
+    override-pull: |
+      snapcraftctl pull
+
+      mkdir -p bin/translations
+      mkdir -p snap/command-chain
+      mv locale bin/translations/
+      cp -a bin/translations snap/command-chain/
+      rm -f README.md interface.ui.h songrec.pot update_po_files.sh
+  
+    after: [share]
 
   share:
     plugin: dump
