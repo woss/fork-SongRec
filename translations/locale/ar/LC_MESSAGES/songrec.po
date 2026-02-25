@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-19 12:42+0100\n"
+"POT-Creation-Date: 2026-02-25 22:36+0100\n"
 "PO-Revision-Date: 2026-02-25 21:32+0000\n"
-"Last-Translator: Mu7ammed Basha <mu7basha@users.noreply.weblate.fossplant.re>"
-"\n"
+"Last-Translator: Mu7ammed Basha "
+"<mu7basha@users.noreply.weblate.fossplant.re>\n"
 "Language-Team: Arabic <https://weblate.fossplant.re/projects/songrec/songrec/"
 "ar/>\n"
 "Language: ar\n"
@@ -47,7 +47,7 @@ msgstr "تحذير: تعذر الاتصال بالشبكة"
 
 #: src/cli_main.rs:178 src/core/http_task.rs:54 src/core/http_task.rs:64
 #: src/core/http_task.rs:77 src/core/http_task.rs:121
-#: src/gui/main_window.rs:715 src/gui/main_window.rs:722
+#: src/gui/main_window.rs:726 src/gui/main_window.rs:733
 msgid "No match for this song"
 msgstr "لم يُعثر على أغنية مُطابِقة"
 
@@ -81,8 +81,8 @@ msgid ""
 "Run as a command-line program listening the microphone and printing "
 "recognized songs to stdout, exposing current song info via MPRIS"
 msgstr ""
-"شغّل كبرنامج سطر أوامر يستمع للميكروفون ويطبع الأغاني التي تم التعرف عليها إلى "
-"stdout، واعرض الأغنية الحالية عبر MPRIS"
+"شغّل كبرنامج سطر أوامر يستمع للميكروفون ويطبع الأغاني التي تم التعرف عليها "
+"إلى stdout، واعرض الأغنية الحالية عبر MPRIS"
 
 #: src/main.rs:108 src/main.rs:154 src/main.rs:209
 msgid "List available audio devices and quit"
@@ -197,35 +197,35 @@ msgstr "نطاق التردد غير صالح في فك ترميز حزمة Shaz
 msgid "Invalid sample rate passed when encoding Shazam packet"
 msgstr "عبَر معدل عينة غير صالح أثناء ترميز حزمة Shazam"
 
-#: src/gui/main_window.rs:239
+#: src/gui/main_window.rs:250
 msgid "Application error"
 msgstr "خطأ في التطبيق"
 
-#: src/gui/main_window.rs:260
+#: src/gui/main_window.rs:271
 msgid "Network error"
 msgstr "خطأ في الشبكة"
 
-#: src/gui/main_window.rs:300
+#: src/gui/main_window.rs:311
 msgid "Unable to enable notification icon"
 msgstr "تعذر تفعيل أيقونة الإشعار"
 
-#: src/gui/main_window.rs:635 src/gui/main_window.rs:708
+#: src/gui/main_window.rs:646 src/gui/main_window.rs:719
 msgid "Unable to enable MPRIS support"
 msgstr "تعذر تفعيل دعم MPRIS"
 
-#: src/gui/main_window.rs:792
+#: src/gui/main_window.rs:803
 msgid "Song recognized"
 msgstr "الأغنية عُرِفت"
 
-#: src/gui/main_window.rs:950
+#: src/gui/main_window.rs:961
 msgid "Are you sure you want to wipe history?"
 msgstr "هل ترغب في محو السجل؟"
 
-#: src/gui/main_window.rs:951
+#: src/gui/main_window.rs:962
 msgid "_Yes"
 msgstr "_نعم"
 
-#: src/gui/main_window.rs:951
+#: src/gui/main_window.rs:962
 msgid "_No"
 msgstr "_لا"
 
@@ -389,8 +389,8 @@ msgid ""
 "Bump a song to the top of the history list and remove the former entry when "
 "the same song is detected multiple times"
 msgstr ""
-"ضع أغنيةً أعلى قائمة السجل واحذف العنصر السابق عند العثور على نفس الأغنية لعدة "
-"مرات"
+"ضع أغنيةً أعلى قائمة السجل واحذف العنصر السابق عند العثور على نفس الأغنية "
+"لعدة مرات"
 
 #: translations/interface.ui.h:32
 msgid "No duplicates in history"
@@ -413,8 +413,8 @@ msgid ""
 "By default the last 12 seconds of music are fingerprinted and sent to "
 "Shazam. Editing may have an impact on reliability"
 msgstr ""
-"إفتراضيًا تبصم أخر 12 ثانية من الأغنية ثم تُرسَل إلى Shazam. التعديل قد يؤثر على "
-"جودة التعرف"
+"إفتراضيًا تبصم أخر 12 ثانية من الأغنية ثم تُرسَل إلى Shazam. التعديل قد يؤثر "
+"على جودة التعرف"
 
 #: translations/interface.ui.h:37
 msgid "Shazam buffer size in seconds"
