@@ -28,6 +28,6 @@ done
 # as needed, if a tool like "poedit" didn't already
 # do it automatically
 
-for locale in fr_FR nl it pl es ja ca de_DE ko_KR sk_SK pt_BR cs_CZ; do
+for locale in fr_FR nl it pl es ja ca de_DE ko_KR sk_SK ru pt_BR cs_CZ; do
     msgfmt translations/locale/${locale}/LC_MESSAGES/songrec.po -o translations/locale/${locale}/LC_MESSAGES/songrec.mo
 done
