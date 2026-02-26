@@ -26,7 +26,7 @@ use crate::plugins::ksni::SystrayInterface;
 use crate::plugins::mpris_player::{get_player, update_song};
 use crate::utils::csv_song_history::SongHistoryRecord;
 use crate::utils::filesystem_operations::{
-    obtain_favorites_csv_path, obtain_recognition_history_csv_path,
+    clear_cache, obtain_favorites_csv_path, obtain_recognition_history_csv_path,
 };
 
 use crate::gui::preferences::{Preferences, PreferencesInterface};
@@ -281,6 +281,7 @@ impl App {
         set_recording: bool,
         enable_mpris_cli: bool,
     ) {
+        clear_cache();
         self.setup_intercom(application, set_recording, enable_mpris_cli);
         self.setup_actions(application, enable_mpris_cli);
         #[cfg(target_os = "linux")]
