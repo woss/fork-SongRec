@@ -74,7 +74,14 @@ pub fn clear_cache() {
     if let Ok(contents) = std::fs::read_dir(obtain_cache_directory().unwrap()) {
         for entry in contents {
             if let Ok(entry) = entry {
-                std::fs::remove_file(entry.path()).ok();
+                if entry
+                    .file_name()
+                    .to_str()
+                    .unwrap_or("")
+                    .starts_with("songrec_cover_")
+                {
+                    std::fs::remove_file(entry.path()).ok();
+                }
             }
         }
     }
