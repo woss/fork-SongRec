@@ -53,10 +53,18 @@ parts:
   
     after: [share, alsa-mixin, rust-deps]
 
+  # Bootstraps rustup manually - needed because
+  #  https://github.com/canonical/snapcraft/issues/6330
   rust-deps:
     plugin: nil
     build-packages:
-      - rustup
+      - curl
+    override-pull: |
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+        | sh -s -- -y --profile minimal --default-toolchain stable --no-modify-path
+      ln -sf "$HOME/.cargo/bin/cargo" /usr/local/bin/cargo
+      ln -sf "$HOME/.cargo/bin/rustc" /usr/local/bin/rustc
+      ln -sf "$HOME/.cargo/bin/rustup" /usr/local/bin/rustup
 
   translations:
     plugin: dump
